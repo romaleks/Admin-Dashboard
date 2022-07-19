@@ -1,0 +1,5 @@
+body {
+   background: url('img/background.svg') center / cover no-repeat;
+   aspect-ratio: 1920/900;
+   width: 100%;
+}
