@@ -13,16 +13,18 @@
 <body>
    <main class="content">
       <header class="header">
-         <label for="search">Search...</label>
-         <input type="text" id="search" class="header__search">
+         <div class="header__search">
+            <input type="text" id="search" placeholder=" ">
+            <label for="search">Search...</label>
+         </div>
          <div class="header__btns">
-            <a href="#" class="header__mail"></a>
-            <a href="#" class="header__notife"></a>
-            <a href="#" class="header__settings"></a>
+            <a href="#" class="header__mail"><img src="img/svgs/email.svg" alt=""></a>
+            <a href="#" class="header__notife"><img src="img/svgs/bell.svg" alt=""></a>
+            <a href="#" class="header__settings"><img src="img/svgs/settings.svg" alt=""></a>
          </div>
          <div class="profile">
-            <div class="profile__icon"></div>
             <div class="profile__name">Aleksandr Romanov</div>
+            <div class="profile__icon"></div>
          </div>
       </header>
       <div class="sidebar">
@@ -39,8 +41,8 @@
                   <div class="tab__text">Profile</div>
                </li>
                <li class="sidebar__tab tab">
-                  <div class="tab__icon"></div>
                   <div class="tab__text">Messages</div>
+                  <div class="tab__icon"></div>
                </li>
             </ul>
             <ul class="sidebar__list">

@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+
+:root {
+   --white: #fff;
+   --gray: #46494c;
+   --blue: #2c6cbc;
+   --lite-blue: #71c3f7;
+
+   --font: 'Cabin', sans-serif;
+}
+
 body {
    background: url('img/bg-horizontal.svg') center / cover no-repeat;
    background-attachment: fixed;
    aspect-ratio: 1920 / 900;
    width: 100%;
+   font-family: var(--font);
 }
 
 @media (max-width:1000px) {
@@ -11,4 +23,130 @@ body {
       background-attachment: fixed;
       aspect-ratio: 3 / 4;
    }
+}
+
+.content {
+   display: grid;
+   grid-template: 1fr 10fr / 1fr 4fr;
+   height: 100vh;
+}
+.header {
+   grid-column: 2 / 3;
+   display: flex;
+   align-items: center;
+   padding: 0 50px;
+}
+.header__search {
+   display: inline-block;
+   position: relative;
+   cursor: pointer;
+}
+.header__search label {
+   position: absolute;
+   left: 40px;
+   top: 11px;
+   color: var(--white);
+   cursor: text;
+}
+.header__search input {
+   border: none;
+   outline: none;
+   padding: 10px 10px 10px 40px;
+   background-color: var(--blue);
+   border-radius: 13px;
+   color: var(--white);
+}
+.header__search input:not(:placeholder-shown) + label {
+   display: none;
+}
+.header__search:after {
+   content: url(/img/svgs/magnify.svg);
+   position: absolute;
+   width: 30px;
+   left: 5px;
+   top: 5px;
+}
+.header__btns {
+   display: flex;
+   margin: 0 auto;
+   gap: 15px;
+}
+.header__btns a{
+   display: inline-block;
+   height: 30px;
+}
+.header__btns img{
+   height: 30px;
+}
+.header__mail {
+}
+.header__notife {
+}
+.header__settings {
+}
+.profile {
+   display: flex;
+   align-items: center;
+}
+.profile__icon {
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   background: url('img/logo.jpg') center 114px/ 100px;
+   cursor: pointer;
+}
+.profile__name {
+   margin: 0 10px 0 0;
+   font-size: 1.3rem;
+   cursor: pointer;
+   position: relative;
+}
+.profile__name:after {
+   background-color: var(--lite-blue);
+   bottom: -4px;
+   content: "";
+   height: 2px;
+   left: 0px;
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   transition: 0.3s ease;
+}
+.profile__name:hover:after {
+   transform: scaleX(1);
+}
+.sidebar {
+   grid-row: 1 / -1;
+}
+.sidebar__icon {
+}
+.sidebar__title {
+}
+.sidebar__content {
+}
+.sidebar__list {
+}
+.sidebar__tab {
+}
+.tab {
+}
+.tab__icon {
+}
+.tab__text {
+}
+.main {
+}
+.section {
+}
+.section__title {
+}
+.section__container {
+}
+.item {
+}
+.item__title {
+}
+.item__subtitle {
+}
+.item__image {
 }
