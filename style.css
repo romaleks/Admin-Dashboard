@@ -1,5 +1,14 @@
 body {
-   background: url('img/background.svg') center / cover no-repeat;
-   aspect-ratio: 1920/900;
+   background: url('img/bg-horizontal.svg') center / cover no-repeat;
+   background-attachment: fixed;
+   aspect-ratio: 1920 / 900;
    width: 100%;
+}
+
+@media (max-width:1000px) {
+   body {
+      background: url('img/bg-vertical.svg') center / cover no-repeat;
+      background-attachment: fixed;
+      aspect-ratio: 3 / 4;
+   }
 }
