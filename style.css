@@ -5,6 +5,11 @@
    --gray: #46494c;
    --blue: #2c6cbc;
    --lite-blue: #71c3f7;
+   --v-lite-blue: #cae9ff;
+   --pink: #ffe5ec;
+   --green: #d1ffc6;
+   --yellow: #fcf3bc;
+   --red: #ffaaa5;
 
    --font: 'Cabin', sans-serif;
 }
@@ -14,6 +19,7 @@ body {
    background-attachment: fixed;
    aspect-ratio: 1920 / 900;
    width: 100%;
+   height: 100vh;
    font-family: var(--font);
 }
 
@@ -27,10 +33,10 @@ body {
 
 .content {
    display: grid;
-   grid-template-columns: 1fr 4fr;
+   grid-template-columns: 1fr 5fr;
    grid-template-rows: 1fr 10fr;
-   max-height: 100vh;
-   height: 100vh;
+   height: 100%;
+   row-gap: 20px;
 }
 .header {
    grid-column: 1 / 3;
@@ -239,20 +245,79 @@ body {
    transform: scale(1.05);
 }
 .main {
-
+   display: grid;
+   grid-template: repeat(2, 1fr) / 2fr 1fr;
+   padding: 0 0 2rem 0;
 }
-.section {
+.section[id='projects'] {
+   grid-row: 1 / 3;
+}
+.section[id='announ'] {
+   grid-column: 2 ;
+   grid-row: 1 / 2;
+}
+.section[id='trend'] {
+   grid-column: 2 ;
+   grid-row: 2/ 3;
 }
 .section__title {
    margin: 0;
+   font-size: 2rem;
+   margin: 0 0 1rem 0;
 }
 .section__container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   gap: 30px;
 }
 .item {
+   padding: 1.5rem;
+   background-color: var(--v-lite-blue);
+   border-radius: 25px;
+}
+.item:nth-child(2) {
+   background-color: var(--pink);
+}
+.item:nth-child(3) {
+   background-color: var(--green);
+}
+.item:nth-child(4) {
+   background-color: var(--yellow);
+}
+.item:nth-child(5) {
+   background-color: var(--red);
 }
 .item__title {
+   font-weight: 700;
+   font-size: 1.5rem;
+   margin: 0 0 -0.2rem 0;
+}
+.item__cnt {
+   display: flex;
+   align-items: center;
 }
 .item__subtitle {
 }
-.item__image {
+.item__icons {
+   display: flex;
+   margin-left: auto;
+   padding: 0 0 8px 0;
+   gap: 8px;
+}
+.item__icon {
+   width: 30px;
+   transition: all 0.1s ease;
+}
+.item__icon:hover {
+   transform: scale(1.05);
+}
+.item__subtitle {
+   margin: 0 0 0.5rem 0;
+}
+.item__image img{
+
+   width: 100%;
+   height: auto;
+   box-sizing: border-box;
+   border-radius: 20px;
 }
