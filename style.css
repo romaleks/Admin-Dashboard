@@ -246,19 +246,12 @@ body {
 }
 .main {
    display: grid;
-   grid-template: repeat(2, 1fr) / 2fr 1fr;
-   padding: 0 0 2rem 0;
+   grid-template-columns: 2fr 1fr;
+   column-gap: 50px;
+   padding: 0 2rem 2rem 0;
 }
 .section[id='projects'] {
    grid-row: 1 / 3;
-}
-.section[id='announ'] {
-   grid-column: 2 ;
-   grid-row: 1 / 2;
-}
-.section[id='trend'] {
-   grid-column: 2 ;
-   grid-row: 2/ 3;
 }
 .section__title {
    margin: 0;
@@ -306,18 +299,72 @@ body {
 }
 .item__icon {
    width: 30px;
-   transition: all 0.1s ease;
+   transition: all 0.2s ease;
 }
 .item__icon:hover {
-   transform: scale(1.05);
+   transform:rotate(-10deg);
 }
 .item__subtitle {
    margin: 0 0 0.5rem 0;
 }
 .item__image img{
-
    width: 100%;
    height: auto;
    box-sizing: border-box;
    border-radius: 20px;
+}
+.contact img {
+   width: 50px;
+}
+.contacts {
+   background-color: var(--v-lite-blue);
+   padding: 1.5rem;
+   border-radius: 25px;
+   margin: 0 0 3rem 0;
+}
+.contact {
+   display: flex;
+   align-items: center;
+   margin: 0 0 1rem 0;
+}
+.contact:last-child {
+   margin: 0;
+}
+.contact__image {
+}
+.contact__info {
+   margin: 0 0 0 0.8rem;
+}
+.contact__name {
+   font-weight: 700;
+   margin: 0 0 0.2rem 0;
+}
+.contact__place {
+}
+.statistic {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 15px;
+}
+.statistic__item {
+   background-color: var(--pink);
+   border-radius: 25px;
+   text-align: center;
+   padding: 1.5rem 0;
+}
+.statistic__item:nth-child(2) {
+   background-color: var(--green);
+}
+.statistic__item:nth-child(3) {
+   background-color: var(--red);
+}
+.statistic__item:nth-child(4) {
+   background-color: var(--yellow);
+}
+.statistic__number {
+   font-size: 3rem;
+   margin: 0 0 0.5rem 0;
+}
+.statistic__title {
+   font-size: 1.5rem;
 }
