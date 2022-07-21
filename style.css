@@ -33,7 +33,7 @@ body {
 
 .content {
    display: grid;
-   grid-template-columns: 1fr 5fr;
+   grid-template-columns: 350px 1fr;
    grid-template-rows: 1fr 10fr;
    height: 100%;
    row-gap: 20px;
