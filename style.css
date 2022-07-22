@@ -261,7 +261,7 @@ body {
 .section__container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-   gap: 30px;
+   gap: 1.9rem;
 }
 .item {
    padding: 1.5rem;
@@ -295,7 +295,7 @@ body {
    display: flex;
    margin-left: auto;
    padding: 0 0 8px 0;
-   gap: 8px;
+   gap: 0.5rem;
 }
 .item__icon {
    width: 30px;
@@ -344,7 +344,7 @@ body {
 .statistic {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-   gap: 15px;
+   gap: 1rem;
 }
 .statistic__item {
    background-color: var(--pink);
