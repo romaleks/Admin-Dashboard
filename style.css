@@ -83,7 +83,7 @@ body {
    display: none;
 }
 .header__search:after {
-   content: url(/img/svgs/magnify.svg);
+   content: url(img/svgs/magnify.svg);
    position: absolute;
    width: 30px;
    left: 5px;
